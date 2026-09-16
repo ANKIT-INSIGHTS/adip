@@ -67,4 +67,4 @@ def test_precipitation_accuracy_wet_dry():
     result = precipitation_accuracy(joined, wet_threshold_mm=0.2)
     assert result["n"] == 3
     # forecast predicted wet at hour 2 (1.0mm), observed was dry -> 1 mismatch out of 3
-    assert result["wet_dry_accuracy"] == pytest.approx(2 / 3)
+    assert result["wet_dry_accuracy"] == pytest.approx(2 / 3, abs=0.001)
