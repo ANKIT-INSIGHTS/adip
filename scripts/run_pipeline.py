@@ -107,7 +107,7 @@ def run(dry_run: bool = False) -> int:
             city_id=city.id,
             key_columns=["city_id", "forecast_run_ts", "target_ts"],
             null_check_columns=["temperature_c", "relative_humidity"],
-            latest_ts=snap_rows["target_ts"].max() if not snap_rows.empty else None,
+            latest_ts=snap_rows["forecast_run_ts"].max() if not snap_rows.empty else None,
             cfg=cfg.data_quality,
         )
         quality_checks_by_city[city.id] = checks

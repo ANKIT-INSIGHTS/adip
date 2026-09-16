@@ -55,6 +55,16 @@ def build_report(ctx: ReportContext) -> str:
         ctx.model_results_md
         or "_No model results this run (insufficient observed data for scoring)._"
     )
+    status_line = (
+        "**Status:** ✅ All cities succeeded"
+        if ctx.cities_succeeded == ctx.cities_attempted
+        else (
+            f"**Status:** ⚠️ Partial failure — "
+            f"{ctx.cities_attempted - ctx.cities_succeeded} "
+            f"{'city' if ctx.cities_attempted - ctx.cities_succeeded == 1 else 'cities'} "
+            "failed to fetch"
+        )
+    )
 
     return f"""# ADIP — Latest Weather Intelligence Report
 
@@ -67,6 +77,8 @@ is manually written or fabricated._
 Pipeline run completed at **{ctx.run_finished_at.isoformat()}** covering
 **{ctx.cities_succeeded}/{ctx.cities_attempted}** configured cities and
 **{ctx.records_ingested}** ingested records in {duration_s:.1f}s.
+
+{status_line}
 
 ## Data Coverage
 
