@@ -35,7 +35,7 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0 # full history so `git show HEAD:<path>` in change_detection works for any file
           persist-credentials: true
