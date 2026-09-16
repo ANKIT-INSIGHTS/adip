@@ -195,7 +195,7 @@
     {
       "city_id": "paris",
       "detail": "Hours since most recent data point",
-      "measured_value": 0.01,
+      "measured_value": 0.0,
       "name": "freshness_hours",
       "passed": true,
       "threshold": 26
@@ -251,7 +251,7 @@
     {
       "city_id": "berlin",
       "detail": "Hours since most recent data point",
-      "measured_value": 0.01,
+      "measured_value": 0.0,
       "name": "freshness_hours",
       "passed": true,
       "threshold": 26
@@ -307,7 +307,7 @@
     {
       "city_id": "madrid",
       "detail": "Hours since most recent data point",
-      "measured_value": 0.0,
+      "measured_value": 0.02,
       "name": "freshness_hours",
       "passed": true,
       "threshold": 26
@@ -419,7 +419,7 @@
     {
       "city_id": "dubai",
       "detail": "Hours since most recent data point",
-      "measured_value": 0.01,
+      "measured_value": 0.0,
       "name": "freshness_hours",
       "passed": true,
       "threshold": 26
@@ -587,7 +587,7 @@
     {
       "city_id": "tokyo",
       "detail": "Hours since most recent data point",
-      "measured_value": 0.0,
+      "measured_value": 0.02,
       "name": "freshness_hours",
       "passed": true,
       "threshold": 26
@@ -643,7 +643,7 @@
     {
       "city_id": "sydney",
       "detail": "Hours since most recent data point",
-      "measured_value": 0.02,
+      "measured_value": 0.0,
       "name": "freshness_hours",
       "passed": true,
       "threshold": 26
@@ -867,7 +867,7 @@
     {
       "city_id": "reykjavik",
       "detail": "Hours since most recent data point",
-      "measured_value": 0.02,
+      "measured_value": 0.0,
       "name": "freshness_hours",
       "passed": true,
       "threshold": 26
@@ -898,7 +898,7 @@
     }
   ],
   "failed": 0,
-  "generated_at": "2026-09-16T21:45:11.268121+00:00",
+  "generated_at": "2026-09-16T21:54:19.220705+00:00",
   "overall_status": "pass",
   "passed": 112,
   "total_checks": 112

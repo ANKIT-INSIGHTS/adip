@@ -6,9 +6,9 @@ is manually written or fabricated._
 
 ## Executive Summary
 
-Pipeline run completed at **2026-09-16T21:45:11.268087+00:00** covering
+Pipeline run completed at **2026-09-16T21:54:19.220645+00:00** covering
 **16/16** configured cities and
-**2688** ingested records in 422.8s.
+**2688** ingested records in 367.8s.
 
 **Status:** ✅ All cities succeeded
 
@@ -44,21 +44,21 @@ Pipeline run completed at **2026-09-16T21:45:11.268087+00:00** covering
 - ✅ **null_fraction**: 0.0 (threshold 0.02) — Max null fraction across ['temperature_c', 'relative_humidity']
 - ✅ **duplicate_fraction**: 0.0 (threshold 0.0) — Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']
 - ✅ **row_count**: 168 (threshold 24) — Row count for city=paris
-- ✅ **freshness_hours**: 0.01 (threshold 26) — Hours since most recent data point
+- ✅ **freshness_hours**: 0.0 (threshold 26) — Hours since most recent data point
 - ✅ **range_temperature_c**: 0 (threshold [-90.0, 60.0]) — Values outside physically plausible range for temperature_c
 - ✅ **range_relative_humidity**: 0 (threshold [0.0, 100.0]) — Values outside physically plausible range for relative_humidity
 - ✅ **range_wind_speed_kmh**: 0 (threshold [0.0, 500.0]) — Values outside physically plausible range for wind_speed_kmh
 - ✅ **null_fraction**: 0.0 (threshold 0.02) — Max null fraction across ['temperature_c', 'relative_humidity']
 - ✅ **duplicate_fraction**: 0.0 (threshold 0.0) — Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']
 - ✅ **row_count**: 168 (threshold 24) — Row count for city=berlin
-- ✅ **freshness_hours**: 0.01 (threshold 26) — Hours since most recent data point
+- ✅ **freshness_hours**: 0.0 (threshold 26) — Hours since most recent data point
 - ✅ **range_temperature_c**: 0 (threshold [-90.0, 60.0]) — Values outside physically plausible range for temperature_c
 - ✅ **range_relative_humidity**: 0 (threshold [0.0, 100.0]) — Values outside physically plausible range for relative_humidity
 - ✅ **range_wind_speed_kmh**: 0 (threshold [0.0, 500.0]) — Values outside physically plausible range for wind_speed_kmh
 - ✅ **null_fraction**: 0.0 (threshold 0.02) — Max null fraction across ['temperature_c', 'relative_humidity']
 - ✅ **duplicate_fraction**: 0.0 (threshold 0.0) — Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']
 - ✅ **row_count**: 168 (threshold 24) — Row count for city=madrid
-- ✅ **freshness_hours**: 0.0 (threshold 26) — Hours since most recent data point
+- ✅ **freshness_hours**: 0.02 (threshold 26) — Hours since most recent data point
 - ✅ **range_temperature_c**: 0 (threshold [-90.0, 60.0]) — Values outside physically plausible range for temperature_c
 - ✅ **range_relative_humidity**: 0 (threshold [0.0, 100.0]) — Values outside physically plausible range for relative_humidity
 - ✅ **range_wind_speed_kmh**: 0 (threshold [0.0, 500.0]) — Values outside physically plausible range for wind_speed_kmh
@@ -72,7 +72,7 @@ Pipeline run completed at **2026-09-16T21:45:11.268087+00:00** covering
 - ✅ **null_fraction**: 0.0 (threshold 0.02) — Max null fraction across ['temperature_c', 'relative_humidity']
 - ✅ **duplicate_fraction**: 0.0 (threshold 0.0) — Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']
 - ✅ **row_count**: 168 (threshold 24) — Row count for city=dubai
-- ✅ **freshness_hours**: 0.01 (threshold 26) — Hours since most recent data point
+- ✅ **freshness_hours**: 0.0 (threshold 26) — Hours since most recent data point
 - ✅ **range_temperature_c**: 0 (threshold [-90.0, 60.0]) — Values outside physically plausible range for temperature_c
 - ✅ **range_relative_humidity**: 0 (threshold [0.0, 100.0]) — Values outside physically plausible range for relative_humidity
 - ✅ **range_wind_speed_kmh**: 0 (threshold [0.0, 500.0]) — Values outside physically plausible range for wind_speed_kmh
@@ -93,14 +93,14 @@ Pipeline run completed at **2026-09-16T21:45:11.268087+00:00** covering
 - ✅ **null_fraction**: 0.0 (threshold 0.02) — Max null fraction across ['temperature_c', 'relative_humidity']
 - ✅ **duplicate_fraction**: 0.0 (threshold 0.0) — Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']
 - ✅ **row_count**: 168 (threshold 24) — Row count for city=tokyo
-- ✅ **freshness_hours**: 0.0 (threshold 26) — Hours since most recent data point
+- ✅ **freshness_hours**: 0.02 (threshold 26) — Hours since most recent data point
 - ✅ **range_temperature_c**: 0 (threshold [-90.0, 60.0]) — Values outside physically plausible range for temperature_c
 - ✅ **range_relative_humidity**: 0 (threshold [0.0, 100.0]) — Values outside physically plausible range for relative_humidity
 - ✅ **range_wind_speed_kmh**: 0 (threshold [0.0, 500.0]) — Values outside physically plausible range for wind_speed_kmh
 - ✅ **null_fraction**: 0.0 (threshold 0.02) — Max null fraction across ['temperature_c', 'relative_humidity']
 - ✅ **duplicate_fraction**: 0.0 (threshold 0.0) — Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']
 - ✅ **row_count**: 168 (threshold 24) — Row count for city=sydney
-- ✅ **freshness_hours**: 0.02 (threshold 26) — Hours since most recent data point
+- ✅ **freshness_hours**: 0.0 (threshold 26) — Hours since most recent data point
 - ✅ **range_temperature_c**: 0 (threshold [-90.0, 60.0]) — Values outside physically plausible range for temperature_c
 - ✅ **range_relative_humidity**: 0 (threshold [0.0, 100.0]) — Values outside physically plausible range for relative_humidity
 - ✅ **range_wind_speed_kmh**: 0 (threshold [0.0, 500.0]) — Values outside physically plausible range for wind_speed_kmh
@@ -128,22 +128,22 @@ Pipeline run completed at **2026-09-16T21:45:11.268087+00:00** covering
 - ✅ **null_fraction**: 0.0 (threshold 0.02) — Max null fraction across ['temperature_c', 'relative_humidity']
 - ✅ **duplicate_fraction**: 0.0 (threshold 0.0) — Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']
 - ✅ **row_count**: 168 (threshold 24) — Row count for city=reykjavik
-- ✅ **freshness_hours**: 0.02 (threshold 26) — Hours since most recent data point
+- ✅ **freshness_hours**: 0.0 (threshold 26) — Hours since most recent data point
 - ✅ **range_temperature_c**: 0 (threshold [-90.0, 60.0]) — Values outside physically plausible range for temperature_c
 - ✅ **range_relative_humidity**: 0 (threshold [0.0, 100.0]) — Values outside physically plausible range for relative_humidity
 - ✅ **range_wind_speed_kmh**: 0 (threshold [0.0, 500.0]) — Values outside physically plausible range for wind_speed_kmh
 
 ## Key Metrics
 
-- **current_temperature_distribution_c**: {'count': 30, 'mean': 19.74, 'std': 6.74, 'min': 10.1, 'p25': 15.62, 'median': 17.1, 'p75': 26.18, 'max': 31.4}
+- **current_temperature_distribution_c**: {'count': 46, 'mean': 19.65, 'std': 6.68, 'min': 10.1, 'p25': 15.53, 'median': 17.1, 'p75': 26.1, 'max': 31.4}
 
 ## Major Changes
 
-- **los_angeles**: +0.4°C (now 27.1°C)
+- **madrid**: +1.8°C (now 18.2°C)
+- **moscow**: -0.9°C (now 10.6°C)
+- **new_york**: -0.5°C (now 24.9°C)
+- **cairo**: +0.4°C (now 28.3°C)
 - **new_york**: -0.4°C (now 25.4°C)
-- **sydney**: +0.2°C (now 11.4°C)
-- **paris**: -0.2°C (now 17.0°C)
-- **london**: -0.2°C (now 16.6°C)
 
 ## Anomalies
 
@@ -151,7 +151,7 @@ _No anomalies detected this run._
 
 ## Trends
 
-Forecasts are revised by a mean of 0.02°C (max 2.5°C) between consecutive issue times, based on 2352 revision pair(s) observed so far.
+Forecasts are revised by a mean of 0.06°C (max 3.5°C) between consecutive issue times, based on 5040 revision pair(s) observed so far.
 
 ## Model Results
 
@@ -173,7 +173,7 @@ _No model results this run (insufficient observed data for scoring)._
 
 ## Pipeline Run Information
 
-- Started: 2026-09-16T21:38:08.446087+00:00
-- Finished: 2026-09-16T21:45:11.268087+00:00
-- Duration: 422.8s
+- Started: 2026-09-16T21:48:11.453536+00:00
+- Finished: 2026-09-16T21:54:19.220645+00:00
+- Duration: 367.8s
 - Data source: [Open-Meteo](https://open-meteo.com/) (forecast + archive APIs)
