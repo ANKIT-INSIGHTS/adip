@@ -1,0 +1,793 @@
+{
+  "checks": [
+    {
+      "city_id": "new_york",
+      "detail": "Max null fraction across ['temperature_c', 'relative_humidity']",
+      "measured_value": 0.0,
+      "name": "null_fraction",
+      "passed": true,
+      "threshold": 0.02
+    },
+    {
+      "city_id": "new_york",
+      "detail": "Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']",
+      "measured_value": 0.0,
+      "name": "duplicate_fraction",
+      "passed": true,
+      "threshold": 0.0
+    },
+    {
+      "city_id": "new_york",
+      "detail": "Row count for city=new_york",
+      "measured_value": 168,
+      "name": "row_count",
+      "passed": true,
+      "threshold": 24
+    },
+    {
+      "city_id": "new_york",
+      "detail": "Hours since most recent data point",
+      "measured_value": -145.55,
+      "name": "freshness_hours",
+      "passed": true,
+      "threshold": 26
+    },
+    {
+      "city_id": "new_york",
+      "detail": "Values outside physically plausible range for temperature_c",
+      "measured_value": 0,
+      "name": "range_temperature_c",
+      "passed": true,
+      "threshold": "[-90.0, 60.0]"
+    },
+    {
+      "city_id": "new_york",
+      "detail": "Values outside physically plausible range for relative_humidity",
+      "measured_value": 0,
+      "name": "range_relative_humidity",
+      "passed": true,
+      "threshold": "[0.0, 100.0]"
+    },
+    {
+      "city_id": "new_york",
+      "detail": "Values outside physically plausible range for wind_speed_kmh",
+      "measured_value": 0,
+      "name": "range_wind_speed_kmh",
+      "passed": true,
+      "threshold": "[0.0, 500.0]"
+    },
+    {
+      "city_id": "los_angeles",
+      "detail": "Max null fraction across ['temperature_c', 'relative_humidity']",
+      "measured_value": 0.0,
+      "name": "null_fraction",
+      "passed": true,
+      "threshold": 0.02
+    },
+    {
+      "city_id": "los_angeles",
+      "detail": "Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']",
+      "measured_value": 0.0,
+      "name": "duplicate_fraction",
+      "passed": true,
+      "threshold": 0.0
+    },
+    {
+      "city_id": "los_angeles",
+      "detail": "Row count for city=los_angeles",
+      "measured_value": 168,
+      "name": "row_count",
+      "passed": true,
+      "threshold": 24
+    },
+    {
+      "city_id": "los_angeles",
+      "detail": "Hours since most recent data point",
+      "measured_value": -145.55,
+      "name": "freshness_hours",
+      "passed": true,
+      "threshold": 26
+    },
+    {
+      "city_id": "los_angeles",
+      "detail": "Values outside physically plausible range for temperature_c",
+      "measured_value": 0,
+      "name": "range_temperature_c",
+      "passed": true,
+      "threshold": "[-90.0, 60.0]"
+    },
+    {
+      "city_id": "los_angeles",
+      "detail": "Values outside physically plausible range for relative_humidity",
+      "measured_value": 0,
+      "name": "range_relative_humidity",
+      "passed": true,
+      "threshold": "[0.0, 100.0]"
+    },
+    {
+      "city_id": "los_angeles",
+      "detail": "Values outside physically plausible range for wind_speed_kmh",
+      "measured_value": 0,
+      "name": "range_wind_speed_kmh",
+      "passed": true,
+      "threshold": "[0.0, 500.0]"
+    },
+    {
+      "city_id": "london",
+      "detail": "Max null fraction across ['temperature_c', 'relative_humidity']",
+      "measured_value": 0.0,
+      "name": "null_fraction",
+      "passed": true,
+      "threshold": 0.02
+    },
+    {
+      "city_id": "london",
+      "detail": "Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']",
+      "measured_value": 0.0,
+      "name": "duplicate_fraction",
+      "passed": true,
+      "threshold": 0.0
+    },
+    {
+      "city_id": "london",
+      "detail": "Row count for city=london",
+      "measured_value": 168,
+      "name": "row_count",
+      "passed": true,
+      "threshold": 24
+    },
+    {
+      "city_id": "london",
+      "detail": "Hours since most recent data point",
+      "measured_value": -145.55,
+      "name": "freshness_hours",
+      "passed": true,
+      "threshold": 26
+    },
+    {
+      "city_id": "london",
+      "detail": "Values outside physically plausible range for temperature_c",
+      "measured_value": 0,
+      "name": "range_temperature_c",
+      "passed": true,
+      "threshold": "[-90.0, 60.0]"
+    },
+    {
+      "city_id": "london",
+      "detail": "Values outside physically plausible range for relative_humidity",
+      "measured_value": 0,
+      "name": "range_relative_humidity",
+      "passed": true,
+      "threshold": "[0.0, 100.0]"
+    },
+    {
+      "city_id": "london",
+      "detail": "Values outside physically plausible range for wind_speed_kmh",
+      "measured_value": 0,
+      "name": "range_wind_speed_kmh",
+      "passed": true,
+      "threshold": "[0.0, 500.0]"
+    },
+    {
+      "city_id": "paris",
+      "detail": "Max null fraction across ['temperature_c', 'relative_humidity']",
+      "measured_value": 0.0,
+      "name": "null_fraction",
+      "passed": true,
+      "threshold": 0.02
+    },
+    {
+      "city_id": "paris",
+      "detail": "Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']",
+      "measured_value": 0.0,
+      "name": "duplicate_fraction",
+      "passed": true,
+      "threshold": 0.0
+    },
+    {
+      "city_id": "paris",
+      "detail": "Row count for city=paris",
+      "measured_value": 168,
+      "name": "row_count",
+      "passed": true,
+      "threshold": 24
+    },
+    {
+      "city_id": "paris",
+      "detail": "Hours since most recent data point",
+      "measured_value": -145.55,
+      "name": "freshness_hours",
+      "passed": true,
+      "threshold": 26
+    },
+    {
+      "city_id": "paris",
+      "detail": "Values outside physically plausible range for temperature_c",
+      "measured_value": 0,
+      "name": "range_temperature_c",
+      "passed": true,
+      "threshold": "[-90.0, 60.0]"
+    },
+    {
+      "city_id": "paris",
+      "detail": "Values outside physically plausible range for relative_humidity",
+      "measured_value": 0,
+      "name": "range_relative_humidity",
+      "passed": true,
+      "threshold": "[0.0, 100.0]"
+    },
+    {
+      "city_id": "paris",
+      "detail": "Values outside physically plausible range for wind_speed_kmh",
+      "measured_value": 0,
+      "name": "range_wind_speed_kmh",
+      "passed": true,
+      "threshold": "[0.0, 500.0]"
+    },
+    {
+      "city_id": "berlin",
+      "detail": "Max null fraction across ['temperature_c', 'relative_humidity']",
+      "measured_value": 0.0,
+      "name": "null_fraction",
+      "passed": true,
+      "threshold": 0.02
+    },
+    {
+      "city_id": "berlin",
+      "detail": "Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']",
+      "measured_value": 0.0,
+      "name": "duplicate_fraction",
+      "passed": true,
+      "threshold": 0.0
+    },
+    {
+      "city_id": "berlin",
+      "detail": "Row count for city=berlin",
+      "measured_value": 168,
+      "name": "row_count",
+      "passed": true,
+      "threshold": 24
+    },
+    {
+      "city_id": "berlin",
+      "detail": "Hours since most recent data point",
+      "measured_value": -145.55,
+      "name": "freshness_hours",
+      "passed": true,
+      "threshold": 26
+    },
+    {
+      "city_id": "berlin",
+      "detail": "Values outside physically plausible range for temperature_c",
+      "measured_value": 0,
+      "name": "range_temperature_c",
+      "passed": true,
+      "threshold": "[-90.0, 60.0]"
+    },
+    {
+      "city_id": "berlin",
+      "detail": "Values outside physically plausible range for relative_humidity",
+      "measured_value": 0,
+      "name": "range_relative_humidity",
+      "passed": true,
+      "threshold": "[0.0, 100.0]"
+    },
+    {
+      "city_id": "berlin",
+      "detail": "Values outside physically plausible range for wind_speed_kmh",
+      "measured_value": 0,
+      "name": "range_wind_speed_kmh",
+      "passed": true,
+      "threshold": "[0.0, 500.0]"
+    },
+    {
+      "city_id": "moscow",
+      "detail": "Max null fraction across ['temperature_c', 'relative_humidity']",
+      "measured_value": 0.0,
+      "name": "null_fraction",
+      "passed": true,
+      "threshold": 0.02
+    },
+    {
+      "city_id": "moscow",
+      "detail": "Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']",
+      "measured_value": 0.0,
+      "name": "duplicate_fraction",
+      "passed": true,
+      "threshold": 0.0
+    },
+    {
+      "city_id": "moscow",
+      "detail": "Row count for city=moscow",
+      "measured_value": 168,
+      "name": "row_count",
+      "passed": true,
+      "threshold": 24
+    },
+    {
+      "city_id": "moscow",
+      "detail": "Hours since most recent data point",
+      "measured_value": -169.52,
+      "name": "freshness_hours",
+      "passed": true,
+      "threshold": 26
+    },
+    {
+      "city_id": "moscow",
+      "detail": "Values outside physically plausible range for temperature_c",
+      "measured_value": 0,
+      "name": "range_temperature_c",
+      "passed": true,
+      "threshold": "[-90.0, 60.0]"
+    },
+    {
+      "city_id": "moscow",
+      "detail": "Values outside physically plausible range for relative_humidity",
+      "measured_value": 0,
+      "name": "range_relative_humidity",
+      "passed": true,
+      "threshold": "[0.0, 100.0]"
+    },
+    {
+      "city_id": "moscow",
+      "detail": "Values outside physically plausible range for wind_speed_kmh",
+      "measured_value": 0,
+      "name": "range_wind_speed_kmh",
+      "passed": true,
+      "threshold": "[0.0, 500.0]"
+    },
+    {
+      "city_id": "dubai",
+      "detail": "Max null fraction across ['temperature_c', 'relative_humidity']",
+      "measured_value": 0.0,
+      "name": "null_fraction",
+      "passed": true,
+      "threshold": 0.02
+    },
+    {
+      "city_id": "dubai",
+      "detail": "Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']",
+      "measured_value": 0.0,
+      "name": "duplicate_fraction",
+      "passed": true,
+      "threshold": 0.0
+    },
+    {
+      "city_id": "dubai",
+      "detail": "Row count for city=dubai",
+      "measured_value": 168,
+      "name": "row_count",
+      "passed": true,
+      "threshold": 24
+    },
+    {
+      "city_id": "dubai",
+      "detail": "Hours since most recent data point",
+      "measured_value": -169.51,
+      "name": "freshness_hours",
+      "passed": true,
+      "threshold": 26
+    },
+    {
+      "city_id": "dubai",
+      "detail": "Values outside physically plausible range for temperature_c",
+      "measured_value": 0,
+      "name": "range_temperature_c",
+      "passed": true,
+      "threshold": "[-90.0, 60.0]"
+    },
+    {
+      "city_id": "dubai",
+      "detail": "Values outside physically plausible range for relative_humidity",
+      "measured_value": 0,
+      "name": "range_relative_humidity",
+      "passed": true,
+      "threshold": "[0.0, 100.0]"
+    },
+    {
+      "city_id": "dubai",
+      "detail": "Values outside physically plausible range for wind_speed_kmh",
+      "measured_value": 0,
+      "name": "range_wind_speed_kmh",
+      "passed": true,
+      "threshold": "[0.0, 500.0]"
+    },
+    {
+      "city_id": "mumbai",
+      "detail": "Max null fraction across ['temperature_c', 'relative_humidity']",
+      "measured_value": 0.0,
+      "name": "null_fraction",
+      "passed": true,
+      "threshold": 0.02
+    },
+    {
+      "city_id": "mumbai",
+      "detail": "Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']",
+      "measured_value": 0.0,
+      "name": "duplicate_fraction",
+      "passed": true,
+      "threshold": 0.0
+    },
+    {
+      "city_id": "mumbai",
+      "detail": "Row count for city=mumbai",
+      "measured_value": 168,
+      "name": "row_count",
+      "passed": true,
+      "threshold": 24
+    },
+    {
+      "city_id": "mumbai",
+      "detail": "Hours since most recent data point",
+      "measured_value": -169.51,
+      "name": "freshness_hours",
+      "passed": true,
+      "threshold": 26
+    },
+    {
+      "city_id": "mumbai",
+      "detail": "Values outside physically plausible range for temperature_c",
+      "measured_value": 0,
+      "name": "range_temperature_c",
+      "passed": true,
+      "threshold": "[-90.0, 60.0]"
+    },
+    {
+      "city_id": "mumbai",
+      "detail": "Values outside physically plausible range for relative_humidity",
+      "measured_value": 0,
+      "name": "range_relative_humidity",
+      "passed": true,
+      "threshold": "[0.0, 100.0]"
+    },
+    {
+      "city_id": "mumbai",
+      "detail": "Values outside physically plausible range for wind_speed_kmh",
+      "measured_value": 0,
+      "name": "range_wind_speed_kmh",
+      "passed": true,
+      "threshold": "[0.0, 500.0]"
+    },
+    {
+      "city_id": "singapore",
+      "detail": "Max null fraction across ['temperature_c', 'relative_humidity']",
+      "measured_value": 0.0,
+      "name": "null_fraction",
+      "passed": true,
+      "threshold": 0.02
+    },
+    {
+      "city_id": "singapore",
+      "detail": "Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']",
+      "measured_value": 0.0,
+      "name": "duplicate_fraction",
+      "passed": true,
+      "threshold": 0.0
+    },
+    {
+      "city_id": "singapore",
+      "detail": "Row count for city=singapore",
+      "measured_value": 168,
+      "name": "row_count",
+      "passed": true,
+      "threshold": 24
+    },
+    {
+      "city_id": "singapore",
+      "detail": "Hours since most recent data point",
+      "measured_value": -169.51,
+      "name": "freshness_hours",
+      "passed": true,
+      "threshold": 26
+    },
+    {
+      "city_id": "singapore",
+      "detail": "Values outside physically plausible range for temperature_c",
+      "measured_value": 0,
+      "name": "range_temperature_c",
+      "passed": true,
+      "threshold": "[-90.0, 60.0]"
+    },
+    {
+      "city_id": "singapore",
+      "detail": "Values outside physically plausible range for relative_humidity",
+      "measured_value": 0,
+      "name": "range_relative_humidity",
+      "passed": true,
+      "threshold": "[0.0, 100.0]"
+    },
+    {
+      "city_id": "singapore",
+      "detail": "Values outside physically plausible range for wind_speed_kmh",
+      "measured_value": 0,
+      "name": "range_wind_speed_kmh",
+      "passed": true,
+      "threshold": "[0.0, 500.0]"
+    },
+    {
+      "city_id": "tokyo",
+      "detail": "Max null fraction across ['temperature_c', 'relative_humidity']",
+      "measured_value": 0.0,
+      "name": "null_fraction",
+      "passed": true,
+      "threshold": 0.02
+    },
+    {
+      "city_id": "tokyo",
+      "detail": "Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']",
+      "measured_value": 0.0,
+      "name": "duplicate_fraction",
+      "passed": true,
+      "threshold": 0.0
+    },
+    {
+      "city_id": "tokyo",
+      "detail": "Row count for city=tokyo",
+      "measured_value": 168,
+      "name": "row_count",
+      "passed": true,
+      "threshold": 24
+    },
+    {
+      "city_id": "tokyo",
+      "detail": "Hours since most recent data point",
+      "measured_value": -169.51,
+      "name": "freshness_hours",
+      "passed": true,
+      "threshold": 26
+    },
+    {
+      "city_id": "tokyo",
+      "detail": "Values outside physically plausible range for temperature_c",
+      "measured_value": 0,
+      "name": "range_temperature_c",
+      "passed": true,
+      "threshold": "[-90.0, 60.0]"
+    },
+    {
+      "city_id": "tokyo",
+      "detail": "Values outside physically plausible range for relative_humidity",
+      "measured_value": 0,
+      "name": "range_relative_humidity",
+      "passed": true,
+      "threshold": "[0.0, 100.0]"
+    },
+    {
+      "city_id": "tokyo",
+      "detail": "Values outside physically plausible range for wind_speed_kmh",
+      "measured_value": 0,
+      "name": "range_wind_speed_kmh",
+      "passed": true,
+      "threshold": "[0.0, 500.0]"
+    },
+    {
+      "city_id": "sydney",
+      "detail": "Max null fraction across ['temperature_c', 'relative_humidity']",
+      "measured_value": 0.0,
+      "name": "null_fraction",
+      "passed": true,
+      "threshold": 0.02
+    },
+    {
+      "city_id": "sydney",
+      "detail": "Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']",
+      "measured_value": 0.0,
+      "name": "duplicate_fraction",
+      "passed": true,
+      "threshold": 0.0
+    },
+    {
+      "city_id": "sydney",
+      "detail": "Row count for city=sydney",
+      "measured_value": 168,
+      "name": "row_count",
+      "passed": true,
+      "threshold": 24
+    },
+    {
+      "city_id": "sydney",
+      "detail": "Hours since most recent data point",
+      "measured_value": -169.51,
+      "name": "freshness_hours",
+      "passed": true,
+      "threshold": 26
+    },
+    {
+      "city_id": "sydney",
+      "detail": "Values outside physically plausible range for temperature_c",
+      "measured_value": 0,
+      "name": "range_temperature_c",
+      "passed": true,
+      "threshold": "[-90.0, 60.0]"
+    },
+    {
+      "city_id": "sydney",
+      "detail": "Values outside physically plausible range for relative_humidity",
+      "measured_value": 0,
+      "name": "range_relative_humidity",
+      "passed": true,
+      "threshold": "[0.0, 100.0]"
+    },
+    {
+      "city_id": "sydney",
+      "detail": "Values outside physically plausible range for wind_speed_kmh",
+      "measured_value": 0,
+      "name": "range_wind_speed_kmh",
+      "passed": true,
+      "threshold": "[0.0, 500.0]"
+    },
+    {
+      "city_id": "cairo",
+      "detail": "Max null fraction across ['temperature_c', 'relative_humidity']",
+      "measured_value": 0.0,
+      "name": "null_fraction",
+      "passed": true,
+      "threshold": 0.02
+    },
+    {
+      "city_id": "cairo",
+      "detail": "Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']",
+      "measured_value": 0.0,
+      "name": "duplicate_fraction",
+      "passed": true,
+      "threshold": 0.0
+    },
+    {
+      "city_id": "cairo",
+      "detail": "Row count for city=cairo",
+      "measured_value": 168,
+      "name": "row_count",
+      "passed": true,
+      "threshold": 24
+    },
+    {
+      "city_id": "cairo",
+      "detail": "Hours since most recent data point",
+      "measured_value": -169.48,
+      "name": "freshness_hours",
+      "passed": true,
+      "threshold": 26
+    },
+    {
+      "city_id": "cairo",
+      "detail": "Values outside physically plausible range for temperature_c",
+      "measured_value": 0,
+      "name": "range_temperature_c",
+      "passed": true,
+      "threshold": "[-90.0, 60.0]"
+    },
+    {
+      "city_id": "cairo",
+      "detail": "Values outside physically plausible range for relative_humidity",
+      "measured_value": 0,
+      "name": "range_relative_humidity",
+      "passed": true,
+      "threshold": "[0.0, 100.0]"
+    },
+    {
+      "city_id": "cairo",
+      "detail": "Values outside physically plausible range for wind_speed_kmh",
+      "measured_value": 0,
+      "name": "range_wind_speed_kmh",
+      "passed": true,
+      "threshold": "[0.0, 500.0]"
+    },
+    {
+      "city_id": "nairobi",
+      "detail": "Max null fraction across ['temperature_c', 'relative_humidity']",
+      "measured_value": 0.0,
+      "name": "null_fraction",
+      "passed": true,
+      "threshold": 0.02
+    },
+    {
+      "city_id": "nairobi",
+      "detail": "Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']",
+      "measured_value": 0.0,
+      "name": "duplicate_fraction",
+      "passed": true,
+      "threshold": 0.0
+    },
+    {
+      "city_id": "nairobi",
+      "detail": "Row count for city=nairobi",
+      "measured_value": 168,
+      "name": "row_count",
+      "passed": true,
+      "threshold": 24
+    },
+    {
+      "city_id": "nairobi",
+      "detail": "Hours since most recent data point",
+      "measured_value": -169.47,
+      "name": "freshness_hours",
+      "passed": true,
+      "threshold": 26
+    },
+    {
+      "city_id": "nairobi",
+      "detail": "Values outside physically plausible range for temperature_c",
+      "measured_value": 0,
+      "name": "range_temperature_c",
+      "passed": true,
+      "threshold": "[-90.0, 60.0]"
+    },
+    {
+      "city_id": "nairobi",
+      "detail": "Values outside physically plausible range for relative_humidity",
+      "measured_value": 0,
+      "name": "range_relative_humidity",
+      "passed": true,
+      "threshold": "[0.0, 100.0]"
+    },
+    {
+      "city_id": "nairobi",
+      "detail": "Values outside physically plausible range for wind_speed_kmh",
+      "measured_value": 0,
+      "name": "range_wind_speed_kmh",
+      "passed": true,
+      "threshold": "[0.0, 500.0]"
+    },
+    {
+      "city_id": "reykjavik",
+      "detail": "Max null fraction across ['temperature_c', 'relative_humidity']",
+      "measured_value": 0.0,
+      "name": "null_fraction",
+      "passed": true,
+      "threshold": 0.02
+    },
+    {
+      "city_id": "reykjavik",
+      "detail": "Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']",
+      "measured_value": 0.0,
+      "name": "duplicate_fraction",
+      "passed": true,
+      "threshold": 0.0
+    },
+    {
+      "city_id": "reykjavik",
+      "detail": "Row count for city=reykjavik",
+      "measured_value": 168,
+      "name": "row_count",
+      "passed": true,
+      "threshold": 24
+    },
+    {
+      "city_id": "reykjavik",
+      "detail": "Hours since most recent data point",
+      "measured_value": -145.47,
+      "name": "freshness_hours",
+      "passed": true,
+      "threshold": 26
+    },
+    {
+      "city_id": "reykjavik",
+      "detail": "Values outside physically plausible range for temperature_c",
+      "measured_value": 0,
+      "name": "range_temperature_c",
+      "passed": true,
+      "threshold": "[-90.0, 60.0]"
+    },
+    {
+      "city_id": "reykjavik",
+      "detail": "Values outside physically plausible range for relative_humidity",
+      "measured_value": 0,
+      "name": "range_relative_humidity",
+      "passed": true,
+      "threshold": "[0.0, 100.0]"
+    },
+    {
+      "city_id": "reykjavik",
+      "detail": "Values outside physically plausible range for wind_speed_kmh",
+      "measured_value": 0,
+      "name": "range_wind_speed_kmh",
+      "passed": true,
+      "threshold": "[0.0, 500.0]"
+    }
+  ],
+  "failed": 0,
+  "generated_at": "2026-09-16T21:31:37.916263+00:00",
+  "overall_status": "pass",
+  "passed": 98,
+  "total_checks": 98
+}
