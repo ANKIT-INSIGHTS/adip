@@ -2,7 +2,7 @@
 # Builds and runs the pipeline with no external credentials required —
 # Open-Meteo needs no API key.
 
-FROM python:3.11-slim AS base
+FROM python:3.14-slim AS base
 
 # System deps: git is required because change_detection.py shells out to
 # `git show` to compare candidate outputs against the last committed version.
