@@ -1,0 +1,111 @@
+name: ADIP Pipeline
+
+# Runs the autonomous data pipeline. A commit is only created when
+# change_detection determines real, meaningful output changed — see
+# scripts/run_pipeline.py exit codes and the "Commit generated artifacts"
+# step below, which is gated on that exit code, not on the job having run.
+on:
+  schedule:
+    # Every 6 hours. Open-Meteo forecasts update multiple times a day, so
+    # this cadence gives meaningful forecast-evolution data without being
+    # wasteful. Change the cron expression here to retune frequency —
+    # no application code changes needed.
+    - cron: "17 */6 * * *"
+  workflow_dispatch: {}
+
+# Prevents two pipeline runs from racing to push commits and corrupting
+# history. If a new run starts while one is in flight, the old one is
+# cancelled rather than queued, since only the newest data matters.
+concurrency:
+  group: adip-pipeline
+  cancel-in-progress: true
+
+permissions:
+  # Least privilege: this workflow only needs to read the repo and push a
+  # commit back to it. It does not open issues/PRs, does not need Actions
+  # write access, and does not touch anything outside this repository.
+  contents: write
+
+env:
+  PYTHON_VERSION: "3.11"
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history so `git show HEAD:<path>` in change_detection works for any file
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Run test suite (gates the pipeline — no commit on failing tests)
+        run: pytest -q
+
+      - name: Run ADIP pipeline
+        id: pipeline
+        run: |
+          set +e
+          python scripts/run_pipeline.py
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+        env:
+          PYTHONUNBUFFERED: "1"
+
+      - name: Fail the job if the pipeline errored
+        if: steps.pipeline.outputs.exit_code == '2'
+        run: |
+          echo "::error::Pipeline failed (exit code 2). See logs above. No commit will be made."
+          exit 1
+
+      - name: Configure git identity for automated commits
+        if: steps.pipeline.outputs.exit_code == '0'
+        run: |
+          git config user.name "adip-bot"
+          git config user.email "adip-bot@users.noreply.github.com"
+
+      - name: Commit and push generated artifacts
+        if: steps.pipeline.outputs.exit_code == '0'
+        run: |
+          set -e
+          git add data/raw reports data/processed 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No staged changes despite pipeline signaling a change — treating as no-op."
+            exit 0
+          fi
+          # Conventional-commit style message summarizing what changed,
+          # built from the pipeline's own JSON summary rather than a canned
+          # string, so the message reflects the real run.
+          CHANGED_COUNT=$(git diff --cached --name-only | wc -l | tr -d ' ')
+          git commit \
+            -m "feat(data): refresh weather intelligence data and analytics" \
+            -m "Automated ADIP pipeline run. ${CHANGED_COUNT} file(s) changed." \
+            -m "new/updated forecast snapshots, analytics, data-quality report, and/or generated charts. See reports/latest_report.md for details." \
+            -m "[automated]"
+          git push
+
+      - name: No meaningful change detected
+        if: steps.pipeline.outputs.exit_code == '1'
+        run: echo "No meaningful data change detected — repository unchanged."
+
+      - name: Upload run artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: adip-run-artifacts-${{ github.run_id }}
+          path: |
+            reports/
+            data/snapshots/*.log
+          retention-days: 14
+          if-no-files-found: ignore

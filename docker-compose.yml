@@ -1,0 +1,13 @@
+services:
+  adip:
+    build: .
+    image: adip:latest
+    container_name: adip-pipeline
+    # Mount data/ and reports/ so pipeline output survives container exit
+    # and is visible on the host without needing to `docker cp`.
+    volumes:
+      - ./data:/app/data
+      - ./reports:/app/reports
+    environment:
+      - PYTHONUNBUFFERED=1
+    # No ports exposed: this is a batch job, not a service.

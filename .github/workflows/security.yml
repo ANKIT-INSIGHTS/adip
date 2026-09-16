@@ -1,0 +1,75 @@
+name: Security
+
+# Dependency vulnerability scanning and secret-pattern checks. Separate from
+# tests.yml so security findings surface as their own status check and
+# don't block on unrelated test flakiness.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "0 3 * * 1" # weekly, independent of the data pipeline's schedule
+  workflow_dispatch: {}
+
+permissions:
+  # Read-only for checkout; security-events:write only so we can upload
+  # SARIF results to GitHub's code scanning UI (Security tab). Nothing here
+  # needs push/write access to repository contents.
+  contents: read
+  security-events: write
+
+concurrency:
+  group: adip-security-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  dependency-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install project + audit tool
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+          pip install pip-audit
+
+      - name: Audit dependencies for known vulnerabilities
+        run: pip-audit --strict --desc
+
+  secret-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Scan for accidentally committed secrets
+        uses: trufflesecurity/trufflehog@main
+        with:
+          extra_args: --only-verified
+
+  codeql:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: python
+
+      - name: Perform CodeQL analysis
+        uses: github/codeql-action/analyze@v3

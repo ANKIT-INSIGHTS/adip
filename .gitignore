@@ -1,0 +1,30 @@
+# Derived analytical database — rebuilt from committed raw JSON on every
+# run (see scripts/rebuild_db.py). Committing it would create noisy binary
+# diffs on every pipeline execution.
+data/snapshots/*.duckdb
+data/snapshots/*.duckdb.wal
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# OS / editor cruft
+.DS_Store
+.vscode/
+.idea/
+
+# Never commit local environment/secrets files
+.env
+.env.*
+*.pem
+*.key

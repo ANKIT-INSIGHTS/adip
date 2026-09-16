@@ -1,0 +1,102 @@
+# ADIP city registry.
+# Adding/removing a city here changes what the pipeline collects — no code changes needed.
+# `id` must be a stable, lowercase, snake_case key: it is used as a primary key
+# throughout storage and must never be renamed once data has been collected for it
+# (renaming silently orphans historical rows).
+cities:
+  - id: new_york
+    name: "New York"
+    country: "US"
+    latitude: 40.7128
+    longitude: -74.0060
+    timezone: "America/New_York"
+  - id: los_angeles
+    name: "Los Angeles"
+    country: "US"
+    latitude: 34.0522
+    longitude: -118.2437
+    timezone: "America/Los_Angeles"
+  - id: london
+    name: "London"
+    country: "GB"
+    latitude: 51.5074
+    longitude: -0.1278
+    timezone: "Europe/London"
+  - id: paris
+    name: "Paris"
+    country: "FR"
+    latitude: 48.8566
+    longitude: 2.3522
+    timezone: "Europe/Paris"
+  - id: berlin
+    name: "Berlin"
+    country: "DE"
+    latitude: 52.5200
+    longitude: 13.4050
+    timezone: "Europe/Berlin"
+  - id: madrid
+    name: "Madrid"
+    country: "ES"
+    latitude: 40.4168
+    longitude: -3.7038
+    timezone: "Europe/Madrid"
+  - id: moscow
+    name: "Moscow"
+    country: "RU"
+    latitude: 55.7558
+    longitude: 37.6173
+    timezone: "Europe/Moscow"
+  - id: dubai
+    name: "Dubai"
+    country: "AE"
+    latitude: 25.2048
+    longitude: 55.2708
+    timezone: "Asia/Dubai"
+  - id: mumbai
+    name: "Mumbai"
+    country: "IN"
+    latitude: 19.0760
+    longitude: 72.8777
+    timezone: "Asia/Kolkata"
+  - id: singapore
+    name: "Singapore"
+    country: "SG"
+    latitude: 1.3521
+    longitude: 103.8198
+    timezone: "Asia/Singapore"
+  - id: tokyo
+    name: "Tokyo"
+    country: "JP"
+    latitude: 35.6762
+    longitude: 139.6503
+    timezone: "Asia/Tokyo"
+  - id: sydney
+    name: "Sydney"
+    country: "AU"
+    latitude: -33.8688
+    longitude: 151.2093
+    timezone: "Australia/Sydney"
+  - id: sao_paulo
+    name: "São Paulo"
+    country: "BR"
+    latitude: -23.5505
+    longitude: -46.6333
+    timezone: "America/Sao_Paulo"
+  - id: cairo
+    name: "Cairo"
+    country: "EG"
+    latitude: 30.0444
+    longitude: 31.2357
+    timezone: "Africa/Cairo"
+  - id: nairobi
+    name: "Nairobi"
+    country: "KE"
+    latitude: -1.2921
+    longitude: 36.8219
+    timezone: "Africa/Nairobi"
+  - id: reykjavik
+    name: "Reykjavik"
+    country: "IS"
+    latitude: 64.1466
+    longitude: -21.9426
+    timezone: "Atlantic/Reykjavik"

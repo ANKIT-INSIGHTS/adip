@@ -1,0 +1,62 @@
+# ADIP pipeline configuration.
+# Changing values here changes pipeline *behavior* without touching code.
+# The GitHub Actions schedule itself lives in .github/workflows/pipeline.yml
+# (cron cannot live in application config), but everything the schedule
+# triggers is controlled from here.
+
+api:
+  forecast_base_url: "https://api.open-meteo.com/v1/forecast"
+  archive_base_url: "https://archive-api.open-meteo.com/v1/archive"
+  request_timeout_seconds: 15
+  max_retries: 4
+  backoff_base_seconds: 1.5
+  # Open-Meteo has no published hard rate limit for non-commercial use at this
+  # volume, but we self-throttle to be a good API citizen.
+  min_seconds_between_requests: 0.5
+
+forecast:
+  hourly_variables:
+    - temperature_2m
+    - apparent_temperature
+    - relative_humidity_2m
+    - precipitation
+    - wind_speed_10m
+    - weather_code
+  daily_variables:
+    - temperature_2m_max
+    - temperature_2m_min
+    - precipitation_sum
+    - sunshine_duration
+    - sunrise
+    - sunset
+  # Lead times (hours ahead) at which forecast snapshots are evaluated for
+  # the forecast-evolution / accuracy analysis.
+  horizons_hours: [6, 24, 48, 72, 120]
+  forecast_days: 7
+
+archive:
+  # ERA5-reanalysis "observed" data lags real time; we only request days
+  # that are safely final to avoid partial/incomplete archive rows.
+  min_days_lag: 5
+
+data_quality:
+  max_null_fraction: 0.02
+  max_duplicate_fraction: 0.0
+  freshness_max_age_hours: 26
+  min_expected_row_count_per_city: 24 # hourly rows for "today" at minimum
+
+anomaly_detection:
+  method: "modified_zscore" # robust to outliers, uses median/MAD
+  threshold: 3.5
+  min_history_days: 14 # do not flag anomalies until enough baseline exists
+
+change_detection:
+  float_comparison_decimals: 2 # ignore float noise below this precision
+  ignore_json_keys:
+    - "generationtime_ms"
+    - "retrieved_at"
+    - "run_id"
+
+reporting:
+  rolling_windows_days: [7, 30]
+  top_n_changes: 5

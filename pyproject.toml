@@ -1,0 +1,58 @@
+[project]
+name = "adip"
+version = "0.1.0"
+description = "Autonomous Data Intelligence Pipeline — a self-operating weather forecast intelligence platform built on Open-Meteo."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "ADIP maintainer" }]
+
+dependencies = [
+    "requests>=2.32,<3",
+    "pandas>=2.2,<3",
+    "duckdb>=1.0,<2",
+    "pydantic>=2.7,<3",
+    "PyYAML>=6.0,<7",
+    "matplotlib>=3.9,<4",
+    "numpy>=1.26,<2.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2,<9",
+    "pytest-cov>=5.0,<6",
+    "ruff>=0.6,<1",
+    "mypy>=1.11,<2",
+    "types-PyYAML",
+    "types-requests",
+]
+
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 95
+target-version = "py311"
+src = ["src", "scripts", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "S"]
+ignore = ["S101"] # allow assert in tests
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "S106"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+warn_unused_ignores = true
+disallow_untyped_defs = false
+exclude = ["tests/"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --cov=src/adip --cov-report=term-missing"

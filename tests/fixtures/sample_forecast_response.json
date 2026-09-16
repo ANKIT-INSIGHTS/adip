@@ -1,0 +1,36 @@
+{
+  "latitude": 40.71,
+  "longitude": -74.01,
+  "timezone": "America/New_York",
+  "current": {
+    "time": "2026-09-16T09:00",
+    "temperature_2m": 21.4,
+    "apparent_temperature": 21.9,
+    "relative_humidity_2m": 55,
+    "precipitation": 0.0,
+    "wind_speed_10m": 12.1,
+    "weather_code": 1
+  },
+  "hourly": {
+    "time": [
+      "2026-09-16T09:00",
+      "2026-09-16T10:00",
+      "2026-09-16T11:00"
+    ],
+    "temperature_2m": [21.4, 22.1, 22.8],
+    "apparent_temperature": [21.9, 22.5, 23.0],
+    "relative_humidity_2m": [55, 53, 50],
+    "precipitation": [0.0, 0.0, 0.1],
+    "wind_speed_10m": [12.1, 11.5, 10.9],
+    "weather_code": [1, 1, 2]
+  },
+  "daily": {
+    "time": ["2026-09-16"],
+    "temperature_2m_max": [24.5],
+    "temperature_2m_min": [18.2],
+    "precipitation_sum": [0.1],
+    "sunshine_duration": [30000.0],
+    "sunrise": ["2026-09-16T06:32"],
+    "sunset": ["2026-09-16T19:01"]
+  }
+}
