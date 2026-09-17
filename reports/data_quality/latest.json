@@ -587,7 +587,7 @@
     {
       "city_id": "sydney",
       "detail": "Hours since most recent data point",
-      "measured_value": 0.02,
+      "measured_value": 0.0,
       "name": "freshness_hours",
       "passed": true,
       "threshold": 26
@@ -643,7 +643,7 @@
     {
       "city_id": "sao_paulo",
       "detail": "Hours since most recent data point",
-      "measured_value": 0.0,
+      "measured_value": 0.01,
       "name": "freshness_hours",
       "passed": true,
       "threshold": 26
@@ -842,7 +842,7 @@
     }
   ],
   "failed": 0,
-  "generated_at": "2026-09-17T06:28:46.934522+00:00",
+  "generated_at": "2026-09-17T06:40:10.388140+00:00",
   "overall_status": "pass",
   "passed": 105,
   "total_checks": 105

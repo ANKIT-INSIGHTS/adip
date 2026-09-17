@@ -1,6 +1,6 @@
 # Data Quality Report
 
-_Generated: 2026-09-17T06:28:46.934522+00:00_
+_Generated: 2026-09-17T06:40:10.388140+00:00_
 
 **Overall status:** ✅ PASS (105/105 checks passed)
 
@@ -79,14 +79,14 @@ _Generated: 2026-09-17T06:28:46.934522+00:00_
 | sydney | null_fraction | ✅ | 0.0 | 0.02 | Max null fraction across ['temperature_c', 'relative_humidity'] |
 | sydney | duplicate_fraction | ✅ | 0.0 | 0.0 | Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts'] |
 | sydney | row_count | ✅ | 168 | 24 | Row count for city=sydney |
-| sydney | freshness_hours | ✅ | 0.02 | 26 | Hours since most recent data point |
+| sydney | freshness_hours | ✅ | 0.0 | 26 | Hours since most recent data point |
 | sydney | range_temperature_c | ✅ | 0 | [-90.0, 60.0] | Values outside physically plausible range for temperature_c |
 | sydney | range_relative_humidity | ✅ | 0 | [0.0, 100.0] | Values outside physically plausible range for relative_humidity |
 | sydney | range_wind_speed_kmh | ✅ | 0 | [0.0, 500.0] | Values outside physically plausible range for wind_speed_kmh |
 | sao_paulo | null_fraction | ✅ | 0.0 | 0.02 | Max null fraction across ['temperature_c', 'relative_humidity'] |
 | sao_paulo | duplicate_fraction | ✅ | 0.0 | 0.0 | Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts'] |
 | sao_paulo | row_count | ✅ | 168 | 24 | Row count for city=sao_paulo |
-| sao_paulo | freshness_hours | ✅ | 0.0 | 26 | Hours since most recent data point |
+| sao_paulo | freshness_hours | ✅ | 0.01 | 26 | Hours since most recent data point |
 | sao_paulo | range_temperature_c | ✅ | 0 | [-90.0, 60.0] | Values outside physically plausible range for temperature_c |
 | sao_paulo | range_relative_humidity | ✅ | 0 | [0.0, 100.0] | Values outside physically plausible range for relative_humidity |
 | sao_paulo | range_wind_speed_kmh | ✅ | 0 | [0.0, 500.0] | Values outside physically plausible range for wind_speed_kmh |

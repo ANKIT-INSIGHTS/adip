@@ -6,9 +6,9 @@ is manually written or fabricated._
 
 ## Executive Summary
 
-Pipeline run completed at **2026-09-17T06:28:46.934469+00:00** covering
+Pipeline run completed at **2026-09-17T06:40:10.388087+00:00** covering
 **15/16** configured cities and
-**2520** ingested records in 320.6s.
+**2520** ingested records in 321.2s.
 
 **Status:** ⚠️ Partial failure — 1 city failed to fetch
 
@@ -93,14 +93,14 @@ Pipeline run completed at **2026-09-17T06:28:46.934469+00:00** covering
 - ✅ **null_fraction**: 0.0 (threshold 0.02) — Max null fraction across ['temperature_c', 'relative_humidity']
 - ✅ **duplicate_fraction**: 0.0 (threshold 0.0) — Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']
 - ✅ **row_count**: 168 (threshold 24) — Row count for city=sydney
-- ✅ **freshness_hours**: 0.02 (threshold 26) — Hours since most recent data point
+- ✅ **freshness_hours**: 0.0 (threshold 26) — Hours since most recent data point
 - ✅ **range_temperature_c**: 0 (threshold [-90.0, 60.0]) — Values outside physically plausible range for temperature_c
 - ✅ **range_relative_humidity**: 0 (threshold [0.0, 100.0]) — Values outside physically plausible range for relative_humidity
 - ✅ **range_wind_speed_kmh**: 0 (threshold [0.0, 500.0]) — Values outside physically plausible range for wind_speed_kmh
 - ✅ **null_fraction**: 0.0 (threshold 0.02) — Max null fraction across ['temperature_c', 'relative_humidity']
 - ✅ **duplicate_fraction**: 0.0 (threshold 0.0) — Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts']
 - ✅ **row_count**: 168 (threshold 24) — Row count for city=sao_paulo
-- ✅ **freshness_hours**: 0.0 (threshold 26) — Hours since most recent data point
+- ✅ **freshness_hours**: 0.01 (threshold 26) — Hours since most recent data point
 - ✅ **range_temperature_c**: 0 (threshold [-90.0, 60.0]) — Values outside physically plausible range for temperature_c
 - ✅ **range_relative_humidity**: 0 (threshold [0.0, 100.0]) — Values outside physically plausible range for relative_humidity
 - ✅ **range_wind_speed_kmh**: 0 (threshold [0.0, 500.0]) — Values outside physically plausible range for wind_speed_kmh
@@ -128,7 +128,7 @@ Pipeline run completed at **2026-09-17T06:28:46.934469+00:00** covering
 
 ## Key Metrics
 
-- **current_temperature_distribution_c**: {'count': 77, 'mean': 19.52, 'std': 6.82, 'min': 8.7, 'p25': 14.1, 'median': 17.0, 'p75': 26.0, 'max': 36.3}
+- **current_temperature_distribution_c**: {'count': 92, 'mean': 19.62, 'std': 6.98, 'min': 8.7, 'p25': 14.05, 'median': 17.1, 'p75': 26.05, 'max': 36.7}
 
 ## Major Changes
 
@@ -144,7 +144,7 @@ _No anomalies detected this run._
 
 ## Trends
 
-Forecasts are revised by a mean of 0.18°C (max 7.7°C) between consecutive issue times, based on 10080 revision pair(s) observed so far.
+Forecasts are revised by a mean of 0.15°C (max 7.7°C) between consecutive issue times, based on 12600 revision pair(s) observed so far.
 
 ## Model Results
 
@@ -166,7 +166,7 @@ _No model results this run (insufficient observed data for scoring)._
 
 ## Pipeline Run Information
 
-- Started: 2026-09-17T06:23:26.365832+00:00
-- Finished: 2026-09-17T06:28:46.934469+00:00
-- Duration: 320.6s
+- Started: 2026-09-17T06:34:49.195254+00:00
+- Finished: 2026-09-17T06:40:10.388087+00:00
+- Duration: 321.2s
 - Data source: [Open-Meteo](https://open-meteo.com/) (forecast + archive APIs)
