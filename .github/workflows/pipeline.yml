@@ -79,7 +79,13 @@ jobs:
         if: steps.pipeline.outputs.exit_code == '0'
         run: |
           set -e
-          git add data/raw reports data/processed 2>/dev/null || true
+          if [ ! -f /tmp/adip_changed_files.json ]; then
+            echo "::error::Pipeline did not produce its changed-files manifest."
+            exit 1
+          fi
+          while IFS= read -r path; do
+            git add -- "$path"
+          done < <(jq -r '.[]' /tmp/adip_changed_files.json)
           if git diff --cached --quiet; then
             echo "No staged changes despite pipeline signaling a change — treating as no-op."
             exit 0
