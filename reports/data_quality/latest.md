@@ -1,6 +1,6 @@
 # Data Quality Report
 
-_Generated: 2026-09-16T21:54:19.220705+00:00_
+_Generated: 2026-09-17T00:40:56.102433+00:00_
 
 **Overall status:** ✅ PASS (112/112 checks passed)
 
@@ -37,14 +37,14 @@ _Generated: 2026-09-16T21:54:19.220705+00:00_
 | berlin | null_fraction | ✅ | 0.0 | 0.02 | Max null fraction across ['temperature_c', 'relative_humidity'] |
 | berlin | duplicate_fraction | ✅ | 0.0 | 0.0 | Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts'] |
 | berlin | row_count | ✅ | 168 | 24 | Row count for city=berlin |
-| berlin | freshness_hours | ✅ | 0.0 | 26 | Hours since most recent data point |
+| berlin | freshness_hours | ✅ | 0.02 | 26 | Hours since most recent data point |
 | berlin | range_temperature_c | ✅ | 0 | [-90.0, 60.0] | Values outside physically plausible range for temperature_c |
 | berlin | range_relative_humidity | ✅ | 0 | [0.0, 100.0] | Values outside physically plausible range for relative_humidity |
 | berlin | range_wind_speed_kmh | ✅ | 0 | [0.0, 500.0] | Values outside physically plausible range for wind_speed_kmh |
 | madrid | null_fraction | ✅ | 0.0 | 0.02 | Max null fraction across ['temperature_c', 'relative_humidity'] |
 | madrid | duplicate_fraction | ✅ | 0.0 | 0.0 | Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts'] |
 | madrid | row_count | ✅ | 168 | 24 | Row count for city=madrid |
-| madrid | freshness_hours | ✅ | 0.02 | 26 | Hours since most recent data point |
+| madrid | freshness_hours | ✅ | 0.0 | 26 | Hours since most recent data point |
 | madrid | range_temperature_c | ✅ | 0 | [-90.0, 60.0] | Values outside physically plausible range for temperature_c |
 | madrid | range_relative_humidity | ✅ | 0 | [0.0, 100.0] | Values outside physically plausible range for relative_humidity |
 | madrid | range_wind_speed_kmh | ✅ | 0 | [0.0, 500.0] | Values outside physically plausible range for wind_speed_kmh |
@@ -72,14 +72,14 @@ _Generated: 2026-09-16T21:54:19.220705+00:00_
 | singapore | null_fraction | ✅ | 0.0 | 0.02 | Max null fraction across ['temperature_c', 'relative_humidity'] |
 | singapore | duplicate_fraction | ✅ | 0.0 | 0.0 | Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts'] |
 | singapore | row_count | ✅ | 168 | 24 | Row count for city=singapore |
-| singapore | freshness_hours | ✅ | 0.0 | 26 | Hours since most recent data point |
+| singapore | freshness_hours | ✅ | 0.02 | 26 | Hours since most recent data point |
 | singapore | range_temperature_c | ✅ | 0 | [-90.0, 60.0] | Values outside physically plausible range for temperature_c |
 | singapore | range_relative_humidity | ✅ | 0 | [0.0, 100.0] | Values outside physically plausible range for relative_humidity |
 | singapore | range_wind_speed_kmh | ✅ | 0 | [0.0, 500.0] | Values outside physically plausible range for wind_speed_kmh |
 | tokyo | null_fraction | ✅ | 0.0 | 0.02 | Max null fraction across ['temperature_c', 'relative_humidity'] |
 | tokyo | duplicate_fraction | ✅ | 0.0 | 0.0 | Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts'] |
 | tokyo | row_count | ✅ | 168 | 24 | Row count for city=tokyo |
-| tokyo | freshness_hours | ✅ | 0.02 | 26 | Hours since most recent data point |
+| tokyo | freshness_hours | ✅ | 0.01 | 26 | Hours since most recent data point |
 | tokyo | range_temperature_c | ✅ | 0 | [-90.0, 60.0] | Values outside physically plausible range for temperature_c |
 | tokyo | range_relative_humidity | ✅ | 0 | [0.0, 100.0] | Values outside physically plausible range for relative_humidity |
 | tokyo | range_wind_speed_kmh | ✅ | 0 | [0.0, 500.0] | Values outside physically plausible range for wind_speed_kmh |
@@ -114,7 +114,7 @@ _Generated: 2026-09-16T21:54:19.220705+00:00_
 | reykjavik | null_fraction | ✅ | 0.0 | 0.02 | Max null fraction across ['temperature_c', 'relative_humidity'] |
 | reykjavik | duplicate_fraction | ✅ | 0.0 | 0.0 | Duplicate fraction on key ['city_id', 'forecast_run_ts', 'target_ts'] |
 | reykjavik | row_count | ✅ | 168 | 24 | Row count for city=reykjavik |
-| reykjavik | freshness_hours | ✅ | 0.0 | 26 | Hours since most recent data point |
+| reykjavik | freshness_hours | ✅ | 0.01 | 26 | Hours since most recent data point |
 | reykjavik | range_temperature_c | ✅ | 0 | [-90.0, 60.0] | Values outside physically plausible range for temperature_c |
 | reykjavik | range_relative_humidity | ✅ | 0 | [0.0, 100.0] | Values outside physically plausible range for relative_humidity |
 | reykjavik | range_wind_speed_kmh | ✅ | 0 | [0.0, 500.0] | Values outside physically plausible range for wind_speed_kmh |
