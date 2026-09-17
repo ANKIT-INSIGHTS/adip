@@ -346,7 +346,7 @@ def run(dry_run: bool = False) -> int:
         "unchanged_files_count": len(change_report.unchanged_files),
         "commit_recommended": change_report.has_meaningful_change,
     }
-    Path("/tmp/adip_changed_files.json").write_text(
+    Path("/tmp/adip_changed_files.json").write_text(  # noqa: S108
         json.dumps(summary["changed_files"], indent=2) + "\n",
         encoding="utf-8",
     )
