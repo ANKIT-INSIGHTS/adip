@@ -110,7 +110,7 @@ def detect_changes(candidate_paths: list[Path], cfg: ChangeDetectionConfig) -> C
             changed.append(str(path.relative_to(REPO_ROOT)))
             continue
 
-        tmp_path = path.with_suffix(path.suffix + ".prev_tmp")
+        tmp_path = path.parent / f"{path.stem}.prev_tmp{path.suffix}"
         tmp_path.write_bytes(previous_bytes)
         try:
             old_hash = content_hash(tmp_path, cfg)
