@@ -49,7 +49,7 @@
       "time": "iso8601"
     },
     "elevation": 7.0,
-    "generationtime_ms": 1.2074708938598633,
+    "generationtime_ms": 1.0676383972167969,
     "hourly": {
       "apparent_temperature": [
         5.2,
@@ -585,7 +585,7 @@
     "timezone_abbreviation": "GMT",
     "utc_offset_seconds": 0
   },
-  "retrieved_at": "2026-09-17T00:40:55.697217+00:00",
+  "retrieved_at": "2026-09-17T06:28:46.547289+00:00",
   "source": "open-meteo-archive-api-era5",
   "start_date": "2026-09-10"
 }
