@@ -65,7 +65,7 @@ def test_detect_changes_ignores_volatile_keys(tmp_path: Path, monkeypatch):
     monkeypatch.setattr(change_detection, "REPO_ROOT", tmp_path)
     paths = [tmp_path / "a.json", tmp_path / "b.json"]
     previous = {}
-    for path, value in zip(paths, (1, 2)):
+    for path, value in zip(paths, (1, 2), strict=True):
         path.write_text(json.dumps({"value": value, "retrieved_at": "old"}))
         previous[path] = path.read_bytes()
         path.write_text(json.dumps({"value": value, "retrieved_at": "new"}))
